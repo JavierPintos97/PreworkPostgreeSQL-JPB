@@ -1,7 +1,7 @@
 -- Active: 1707938630862@@localhost@5432@mibasededatos
  /*Ejercicio 5 */
 --1. Crea una tabla llamada "Clientes" con las columnas id (entero) y nombre (cadena de texto)
-CREATE TABLE public.Clientes (id SERIAL, nombre TEXT);
+CREATE TABLE public.Clientes (id SERIAL, nombre VARCHAR(25));
 --2. Inserta un cliente con id=1 y nombre='John' en la tabla "Clientes"
 INSERT INTO public.Clientes (nombre) VALUES ('John');
 --3. Actualiza el nombre del cliente con id=1 a 'John Doe' en la tabla "Clientes"
@@ -26,7 +26,7 @@ DELETE FROM public.Pedidos WHERE id = 1;
 --10. Lee todos los pedidos de la tabla "Pedidos"
 SELECT * FROM Pedidos;
 --11. Crea una tabla llamada "Productos" con las columnas id (entero) y nombre (cadena de texto)
-CREATE TABLE public.Productos (id SERIAL, nombre TEXT);
+CREATE TABLE public.Productos (id SERIAL, nombre VARCHAR(25));
 --12. Inserta un producto con id=1 y nombre='Camisa' en la tabla "Productos"
 INSERT INTO public.Productos (nombre) VALUES ('Camisa');
 --13. Actualiza el nombre del producto con id=1 a 'Pantalón' en la tabla "Productos"

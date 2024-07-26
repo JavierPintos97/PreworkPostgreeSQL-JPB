@@ -2,7 +2,7 @@
 Nivel de dificultad: Difícil */
 --Ejercicios 3
 --3.1) Crea una tabla llamada "Productos" con las columnas: "id" (entero, clave primaria), "nombre" (texto) y "precio" (numérico)
-CREATE TABLE public.Productos (id SERIAL PRIMARY KEY, nombre TEXT, precio FLOAT);
+CREATE TABLE public.Productos (id SERIAL PRIMARY KEY, nombre varchar (35), precio FLOAT);
 --3.2) Inserta al menos cinco registros en la tabla "Productos"
 INSERT INTO public.Productos(nombre,precio) VALUES ('Deportivas', 99.50);
 INSERT INTO public.Productos(nombre,precio) VALUES ('Gafas de sol', 107);
