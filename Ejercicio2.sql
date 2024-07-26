@@ -4,7 +4,7 @@ Nivel de dificultad: Fácil*/
 CREATE DATABASE MiBaseDeDatos;
 --2.2) Crea una tabla llamada "Usuarios" con las columnas: "id" (entero, claveprimaria), "nombre" (texto) y "edad" (entero)
 --DESDE LA QUERY TOOL DE NUESTRA NUEVA BBDD
-CREATE TABLE public.Usuarios(id SERIAL PRIMARY KEY, nombre VARCHAR(50), edad INT);
+CREATE TABLE public.Usuarios(id SERIAL PRIMARY KEY, nombre TEXT, edad INT);
 --2.3) Inserta dos registros en la tabla "Usuarios"
 INSERT INTO public.Usuarios (nombre,edad) VALUES ('Maria', 56);
 INSERT INTO public.Usuarios (nombre,edad) VALUES ('Javier',60);
@@ -17,7 +17,7 @@ DELETE FROM public.Usuarios WHERE id = 2;
 
 /*Nivel de dificultad: Moderado */
 --2.1) Crea una tabla llamada "Ciudades" con las columnas: "id" (entero, clave primaria), "nombre" (texto) y "pais" (texto)
-CREATE TABLE Ciudades (id SERIAL PRIMARY KEY, nombre VARCHAR(50), pais VARCHAR(125));
+CREATE TABLE Ciudades (id SERIAL PRIMARY KEY, nombre TEXT, pais TEXT);
 --2.2 Inserta al menos tres registros en la tabla "Ciudades"
 INSERT INTO public.Ciudades (nombre,pais) VALUES ('Madrid','España');
 INSERT INTO public.Ciudades (nombre,pais) VALUES ('Milan','Italia');

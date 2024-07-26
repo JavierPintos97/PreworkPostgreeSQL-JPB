@@ -35,7 +35,7 @@ LEFT JOIN public.Usuarios U
 on PE.id_usuario = U.id;
 /*4.5) Agrega una nueva columna llamada "cantidad" a la tabla "Pedidos" y actualiza los registros existentes con un valor (utiliza ALTER TABLE y UPDATE) */
 
-ALTER TABLE public.Pedidos ADD  Cantidad INT;
+ALTER TABLE public.Pedidos ADD COLUMN Cantidad INT;
 
 UPDATE public.Pedidos
 SET Cantidad = 5

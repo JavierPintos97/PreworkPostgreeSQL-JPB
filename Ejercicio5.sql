@@ -1,8 +1,9 @@
+-- Active: 1707938630862@@localhost@5432@mibasededatos
  /*Ejercicio 5 */
 --1. Crea una tabla llamada "Clientes" con las columnas id (entero) y nombre (cadena de texto)
-CREATE TABLE public.Clientes (id INt, nombre VARCHAR(75));
+CREATE TABLE public.Clientes (id SERIAL, nombre TEXT);
 --2. Inserta un cliente con id=1 y nombre='John' en la tabla "Clientes"
-INSERT INTO public.Clientes (id,nombre) VALUES (1,'John');
+INSERT INTO public.Clientes (nombre) VALUES ('John');
 --3. Actualiza el nombre del cliente con id=1 a 'John Doe' en la tabla "Clientes"
 UPDATE public.Clientes
 SET nombre = 'John Doe'
@@ -12,9 +13,9 @@ DELETE FROM public.Clientes WHERE id = 1;
 --5. Lee todos los clientes de la tabla "Clientes"
 SELECT * FROM public.Clientes;
 --6. Crea una tabla llamada "Pedidos" con las columnas id (entero) y cliente_id (entero)
-CREATE TABLE public.Pedidos (id INT, cliente_id INT);
+CREATE TABLE public.Pedidos (id SERIAL, cliente_id INT);
 --7. Inserta un pedido con id=1 y cliente_id=1 en la tabla "Pedidos"
-INSERT INTO public.Pedidos (id,cliente_id) VALUES (1,1);
+INSERT INTO public.Pedidos (cliente_id) VALUES (1);
 --8. Actualiza el cliente_id del pedido con id=1 a 2 en la tabla "Pedidos"
 UPDATE public.Pedidos
 SET id = 2
@@ -25,9 +26,9 @@ DELETE FROM public.Pedidos WHERE id = 1;
 --10. Lee todos los pedidos de la tabla "Pedidos"
 SELECT * FROM Pedidos;
 --11. Crea una tabla llamada "Productos" con las columnas id (entero) y nombre (cadena de texto)
-CREATE TABLE public.Productos (id INT, nombre VARCHAR(75));
+CREATE TABLE public.Productos (id SERIAL, nombre TEXT);
 --12. Inserta un producto con id=1 y nombre='Camisa' en la tabla "Productos"
-INSERT INTO public.Productos (id,nombre) VALUES (1,'Camisa');
+INSERT INTO public.Productos (nombre) VALUES ('Camisa');
 --13. Actualiza el nombre del producto con id=1 a 'Pantalón' en la tabla "Productos"
 UPDATE Public.Productos
 SET nombre = 'Pantalón'

@@ -80,7 +80,7 @@ ALTER TABLE public.Pedidos ADD Fecha Date;
 /* 1.19) Agregar una clave externa a la tabla "Pedidos" que haga referencia a la tabla "Productos" en la columna "producto" */
 ALTER TABLE public.Pedidos 
 ADD FOREIGN KEY (pedidos) REFERENCES public.Productos(nombre);
-/* 1.20) 0. Realizar una consulta que muestre los nombres de los clientes, los nombres de los productos y las cantidades de los pedidos donde coincida la clave externa */
+/* 1.20)  Realizar una consulta que muestre los nombres de los clientes, los nombres de los productos y las cantidades de los pedidos donde coincida la clave externa */
 
 SELECT C.nombre, P.nombre, PE.cantidad
 FROM public.Clientes C
